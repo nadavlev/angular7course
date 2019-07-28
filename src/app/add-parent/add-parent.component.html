@@ -1,0 +1,14 @@
+<p>add-parent works!</p>
+
+Name: <input type="text" #firstName [value]="currentPerson.firstName" (keyup)="updateFirstName(firstName.value)"><br>
+Age: <input type="text" #lastName [value]="currentPerson.lastName" (keyup)="updateLastName(lastName.value)"><br>
+City: <select #city [value]="currentPerson.city" (change)="updateCity(city.value)">
+  <option value="TA">Tel Aviv</option>
+  <option value="HA">Haifa</option>
+  <option value="BE">Beer Sheva</option>
+</select><br>
+<input type="button" (click)="addPerson()" value="Add Person">
+<input type="button" (click)="sendToChild()" value="sedData">
+
+<hr>
+<app-addlist [persons]="persons" [data]="childData"></app-addlist>

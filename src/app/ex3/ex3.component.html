@@ -1,0 +1,27 @@
+<p>ex3 works!</p>
+
+<input type="text" #txt (keyup)="textKeyUp(txt.value)">
+<div [style.backgroundColor]="txt.value.length > 5 ? 'red': 'blue'">
+  text length
+</div>
+<br>
+
+<input type="checkbox" (change)="colorCheckboxChange('blue')" value="blue">Blue<br>
+<input type="checkbox" (change)="colorCheckboxChange('green')" value="green">green<br>
+<input type="checkbox" (change)="colorCheckboxChange('red')" value="red">red<br>
+
+<ul>
+  red <li *ngIf="colorStateArr['red']"></li>
+  green <li *ngIf="colorStateArr['green']"></li>
+  blue <li *ngIf="colorStateArr['blue']"></li>
+</ul>
+<br>
+
+
+<table style="border-width: 2px; border-color: black">
+  <tr *ngFor="let student of personArr">
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.city}}</td>
+  </tr>
+</table>

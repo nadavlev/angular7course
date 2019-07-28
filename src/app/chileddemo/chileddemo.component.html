@@ -1,0 +1,9 @@
+<p>chileddemo works!</p>
+{{textfromparent}}<br>
+My Name is:{{name}}<br>
+My age is: {{age}}<br>
+I {{hasDriverLicense ? 'Do' : 'Do not'}} Have a driver license<br>
+
+<hr>
+<input type="text" #messageFromChiled (change)="updateChildMessage(messageFromChiled.value)">
+<input type="button" (click)="sentToParent()" value="Sent To Parent">

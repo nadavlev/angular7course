@@ -1,0 +1,13 @@
+<p>addlist works!</p>
+<pre>
+  {{persons | json}}
+</pre>
+<div *ngFor="let person of persons">
+  <span>{{person.firstName}}</span>
+  <span>{{person.lastName}}</span>
+  <span>{{person.city}}</span>
+</div>
+<hr>
+<pre>
+  {{data | json}}
+</pre>

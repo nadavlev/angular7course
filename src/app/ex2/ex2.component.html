@@ -1,0 +1,14 @@
+<p>ex2 works!</p>
+
+<input type="text" #txt1 (keyup)="change(txt1.value)">
+<input type="text" #txt2 (keyup)="change(txt2.value)">
+<div>
+  {{displayText}}
+</div>
+
+<form>
+  <input type="radio" value="demo" name="chackboxSelect" (change)="switchCheckbox(true)">
+  <input type="radio" value="demo" name="chackboxSelect" (change)="switchCheckbox(false)">
+  <input type="checkbox" name="radioIndicator" [checked]="radioIndicator">
+</form>
+checkbox state: {{radioIndicator}}

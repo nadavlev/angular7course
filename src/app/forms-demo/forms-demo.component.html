@@ -1,0 +1,21 @@
+<p>forms-demo works!</p>
+
+<div>
+  <form #f="ngForm" name="myForm" (ngSubmit)="customSubmit(f.valid)">
+    First Name: <input [(ngModel)]="user.fName" #fNameField="ngModel" minlength="4" type="text" name="fName"><br>
+    Last Name: <input [(ngModel)]="user.lName" type="text" name="lName"><br>
+    <input type="radio" [(ngModel)]="user.gender" value='Male' name="gender" >Male <br>
+    <input type="radio" [(ngModel)]="user.gender" value='Female' name="gender">Female<br>
+    <input type="checkbox" name="adult" [(ngModel)]="user.adult" id="">Adolt? <br>
+    <select [(ngModel)]="user.city" name="city">
+      <option value="TelAviv">Tel Aviv</option>
+      <option value="Haifa">Haifa</option>
+      <option value="Beersheba">Beer Sheva</option>
+    </select>
+    <input type="submit" value="Submit"><br>
+    
+  <div *ngIf="!fNameField.valid">First Name is not valid</div>
+  <div *ngIf="!f.valid && f.touched ">Form is not Valid</div>
+
+  </form>
+</div>

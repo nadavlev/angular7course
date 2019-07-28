@@ -1,0 +1,7 @@
+<p>parentdemo works!</p>
+
+Name: <input type="text" #name (keyup)="updateName(name.value)">
+Age: <input type="text" #age (keyup)="updateAge(age.value)">
+Has Driver License: <input type="checkbox" #driver (change)="updateHasDriverLicense(driver.checked)"><br>
+Message From Child: {{messageFromChild}}
+<app-chileddemo [textfromparent]="parentMessage" (sendMessage)="getMessageFromChild($event)" [name]="nameText" [age]="ageText" [hasDriverLicense]="hasDriverLicense"></app-chileddemo>

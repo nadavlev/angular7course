@@ -1,0 +1,14 @@
+<p>pipedemo works!</p>
+{{test | mypipe : 3}}
+
+<br>
+<hr>
+<input type="range" name="age" #ageRange [(ngModel)]="ageValue" min="1" max="50" id=""> <br>
+Selected Age: {{ageRange.value}}
+
+<table>
+  <tr *ngFor="let p of arr | sliderpipe : ageValue">
+    <td>{{p.name}}</td>
+    <td>{{p.age}}</td>
+  </tr>
+</table>
